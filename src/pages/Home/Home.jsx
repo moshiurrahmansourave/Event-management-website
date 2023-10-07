@@ -14,10 +14,10 @@ const Home = () => {
             <Navbar></Navbar>
             
             <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-1">
-                <div className="col-span-1 border">
+                <div className="col-span-1 ">
                     <LeftSideNav></LeftSideNav>
                 </div>
-                <div className="col-span-3 border">
+                <div className="col-span-3 ">
                   <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-3">
                   {
                     events.map(event => <EventCard
