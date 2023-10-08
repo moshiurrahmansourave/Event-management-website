@@ -10,6 +10,7 @@ const Home = () => {
     
     return (
         <div>
+            
             <Header></Header>
             <Navbar></Navbar>
             
@@ -18,7 +19,7 @@ const Home = () => {
                     <LeftSideNav></LeftSideNav>
                 </div>
                 <div className="col-span-3 ">
-                  <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-3">
+                  <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-3 ">
                   {
                     events.map(event => <EventCard
                     key={event.id}

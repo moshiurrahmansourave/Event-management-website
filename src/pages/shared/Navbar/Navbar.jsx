@@ -16,11 +16,13 @@ const Navbar = () => {
 
 
 const navLinks = <nav  className="flex  font-medium space-x-10">
- <li><NavLink to="/">HOME</NavLink></li>
- <li><NavLink to="/events">EVENTS</NavLink></li>
- <li><NavLink to="/sponsors">SPONSORS</NavLink></li>
- <li><NavLink to="/about us">ABOUT US</NavLink></li>
- <li><NavLink to="/speakers">SPEAKERS</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/">HOME</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/events">EVENTS</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/about us">ABOUT US</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/speakers">SPEAKERS</NavLink></li>
+      
+
       
 </nav>
     return (
@@ -42,9 +44,19 @@ const navLinks = <nav  className="flex  font-medium space-x-10">
     </ul>
   </div>
   <div className="md:navbar-end sm:navbar-center">
+    <div>
+      {
+        user && <p>{user?.email}</p>
+      }
+    </div>
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-7 rounded-full">
-          <img src={userDefaultPic} />
+          {
+            user ?
+              <img src={user.photoURL} />
+              :
+              <img src={userDefaultPic} alt="" />
+          }
         </div>
       </label>
 

@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link,  useNavigate,  } from "react-router-dom";
 import Navbar from "../shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
+import Swal from "sweetalert2";
+
 
 
 const Register = () => {
+    const [registerError, setRegisterError] = useState('')
+    const [success, setSuccess] = useState('')
+
+    
     const {creatUser} = useContext(AuthContext)
+    const navigate = useNavigate();
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -15,20 +22,34 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email, password ,name)
-
+        // reset error
+        setRegisterError('')
+        setSuccess('')
+        if (password.length < 6) {
+            setRegisterError('password should be 6 carecter or longer')
+            return;
+        }
         //create user
         creatUser(email, password)
         .then(result =>{
             console.log(result.user)
+            setSuccess('user creat succesfully')
+            Swal.fire('Registation successfuly')
+            navigate(location?.state ? location.state :
+                '/')
         })
         .catch(error =>{
             console.error(error)
+            setRegisterError(error.message)
+            Swal.fire('Already created')
+            
         })
 
     }
 
     return (
         <div>
+           
             <Navbar></Navbar>
             <div className=" card p-4 w-96 glass mx-auto  ">
             <div className="">
@@ -55,9 +76,17 @@ const Register = () => {
             <label className="label">
                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
             </label>
+            {
+                registerError && <p className="text-red-600">{registerError}</p>
+            }
+            {
+                success && <p className="text-green-700">
+                    {success}
+                </p>
+            }
         </div>
         <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn font-medium text-lg hover:bg-yellow-500 hover:text-white ">Register</button>
         </div>
         <div className="text-center mt-3">
             <p><Link className=" hover:text-yellow-500 font-bold" to="/login">

@@ -7,7 +7,7 @@ const EventCard = ({events}) => {
     return (
        <Link to={`/event/${id}`}>
        
-       <div className="  bg-base-100 hover:shadow-lg hover:-mt-2 transition-all duration-200  ">
+       <div className="  bg-base-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 mb-16 ">
   <figure><img className="w-full lg:h-[284px]" src={img} alt="events" /></figure>
   <p className="btn btn-sm rounded-2xl absolute -mt-14 
    ml-5 border-none px-5 bg-yellow-500 text-white font-semibold">

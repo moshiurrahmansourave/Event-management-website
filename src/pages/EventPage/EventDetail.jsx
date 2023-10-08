@@ -48,7 +48,7 @@ const EventDetail = () => {
                     </div>
                    </div>
 
-                   <div className="mt-3  border">
+                   <div className="mt-3  ">
                    <div className=" lg:mx-12">
                     <h2 className="text-3xl underline font-bold text-center my-3">Speakers</h2>
                         <div className="grid grid-cols-2 gap-10">
