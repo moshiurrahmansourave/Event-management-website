@@ -76,7 +76,7 @@ const Login = () => {
     }
 
     return (
-        <div className="">
+        <div className="lg:mb-96 mb-5 mt-10">
         {/* <Navbar></Navbar> */}
         <div className="card w-96 glass mx-auto my-6 ">
             <div className="p-3">

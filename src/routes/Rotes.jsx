@@ -47,11 +47,11 @@ const routes = createBrowserRouter([
            
             {
                 path:'/speakers',
-                element:<Speakers></Speakers>
+                element:<PrivetRouts><Speakers></Speakers></PrivetRouts>
             },
             {
                 path:'/events',
-                element:<Events></Events>
+                element:<PrivetRouts><Events></Events></PrivetRouts>
             },
             {
                 path:'/blogs',

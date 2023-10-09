@@ -31,6 +31,7 @@ const Register = () => {
         }
         else if (!/[A-Z]/.test(password)) {
             setRegisterError('your password should have at least one upuer case caracters.')
+            Swal.fire('your password should have at least one upuer case caracters.')
             return;
         }
         //create user
@@ -45,14 +46,14 @@ const Register = () => {
         .catch(error =>{
             console.error(error)
             setRegisterError(error.message)
-            Swal.fire('Already created')
+            Swal.fire('Already exists')
             
         })
 
     }
 
     return (
-        <div>
+        <div className="lg:mb-96 mb-5 mt-10">
            
             {/* <Navbar></Navbar> */}
             <div className=" card p-4 w-96 glass mx-auto relative ">

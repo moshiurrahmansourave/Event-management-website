@@ -71,13 +71,13 @@ const navLinks = <nav  className="flex  font-medium space-x-10 ">
          <div className="flex">
                 <div className="border-r ">
                 <Link to="/login">
-                <button className="btn btn-sm rounded-none rounded-l-2xl ">Login</button>
+                <button className="btn btn-sm rounded-none bg-white  text-yellow-500 rounded-l-2xl ">Login</button>
                 </Link>
                 </div>
             
-                <div className="border-l border-yellow-400">
+                <div className="border-l border-gray-300">
                 <Link to="/register">
-                <button className="btn btn-sm rounded-none rounded-r-2xl ">Sing UP</button>
+                <button className="btn btn-sm rounded-none bg-white text-yellow-500 rounded-r-2xl ">Sing UP</button>
                 </Link>
                 </div>
         </div>

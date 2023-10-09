@@ -6,9 +6,21 @@ import card3 from '../../assets/card3.jfif'
 import card4 from '../../assets/card4.webp'
 
 import card6 from '../../assets/card6.avif'
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
+
 
 
 const Sponsor = () => {
+    const { Loading} = useContext(AuthContext)
+    if(Loading){
+        return  <div className="flex justify-center my-20 items-center text-center gap-2">
+            <p className="text-lg">LOADING</p>
+            <span  className="loading loading-spinner loading-sm"></span>
+            
+        </div>
+    }
+    
     return (
         <div>
             <Navbar></Navbar>

@@ -4,8 +4,18 @@ import noumber1 from '../../assets/clint1.jpg'
 import noumber2 from '../../assets/clint2.jpg'
 import noumber3 from '../../assets/clint3.jpg'
 import noumber4 from '../../assets/clint4.jpg'
+import { AuthContext } from "../../context/AuthProvider";
+import { useContext } from "react";
 
 const Blogs = () => {
+    const { Loading} = useContext(AuthContext)
+    if(Loading){
+        return  <div className="flex justify-center my-20 items-center text-center gap-2">
+            <p className="text-lg">LOADING</p>
+            <span  className="loading loading-spinner loading-sm"></span>
+            
+        </div>
+    }
     return (
         <div>
               <div>

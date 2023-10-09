@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
 
      
-         <footer className="md:flex   justify-around p-10  text-base-content py-20 bg-slate-200">
+         <footer className="md:flex   justify-around p-10  text-base-content py-20 bg-slate-200 ">
               
               <aside>
                 <div className=" space-y-2">
