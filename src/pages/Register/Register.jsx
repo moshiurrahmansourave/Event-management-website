@@ -1,5 +1,5 @@
 import { Link,  useNavigate,  } from "react-router-dom";
-import Navbar from "../shared/Navbar/Navbar";
+
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
@@ -29,6 +29,10 @@ const Register = () => {
             setRegisterError('password should be 6 carecter or longer')
             return;
         }
+        else if (!/[A-Z]/.test(password)) {
+            setRegisterError('your password should have at least one upuer case caracters.')
+            return;
+        }
         //create user
         creatUser(email, password)
         .then(result =>{
@@ -50,10 +54,17 @@ const Register = () => {
     return (
         <div>
            
-            <Navbar></Navbar>
-            <div className=" card p-4 w-96 glass mx-auto  ">
+            {/* <Navbar></Navbar> */}
+            <div className=" card p-4 w-96 glass mx-auto relative ">
             <div className="">
-                <h2 className="card-title">Registation</h2>
+            <div className="flex items-center justify-between">
+                <h2 className="card-title">Register</h2>
+                
+                <Link to="/"> 
+                <p className="btn btn-sm rounded-2xl bg-yellow-500 text-white hover:bg-yellow-50 hover:text-yellow-500">Home</p>
+                </Link>
+                
+                </div>
                 
     <form onSubmit={handleRegister} className="">
         <div className="form-control">

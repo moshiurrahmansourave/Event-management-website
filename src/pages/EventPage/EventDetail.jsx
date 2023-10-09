@@ -159,7 +159,7 @@ const EventDetail = () => {
                 <p className="text-center pt-7 pb-12">You might also love these events.</p>
             </div>
             {/* ////// */}
-            <div className="grid grid-cols-3 gap-10 m-2 pb-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 m-2 pb-20">
 
             <div className="  bg-base-100   ">
   <figure><img className="w-full lg:h-[284px]" src="https://i.ibb.co/BqgQ1Dt/Screenshot-83.png" alt="events" /></figure>

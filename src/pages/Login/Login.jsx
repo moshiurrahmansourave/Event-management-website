@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "../shared/Navbar/Navbar";
+
 import { useContext} from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
@@ -71,16 +71,23 @@ const Login = () => {
         .catch(error =>{
             console.error(error)
             
-            Swal.fire('Do not have this account')
+            Swal.fire('email does not match')
         })
     }
 
     return (
         <div className="">
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <div className="card w-96 glass mx-auto my-6 ">
             <div className="p-3">
+                <div className="flex items-center justify-between">
                 <h2 className="card-title">Login form</h2>
+                
+                <Link to="/"> 
+                <p className="btn btn-sm rounded-2xl bg-yellow-500 text-white hover:bg-yellow-50 hover:text-yellow-500">Home</p>
+                </Link>
+                
+                </div>
                 
                
     <form onSubmit={handleLogin} className="">

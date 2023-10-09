@@ -15,18 +15,18 @@ const Navbar = () => {
     }
 
 
-const navLinks = <nav  className="flex  font-medium space-x-10">
+const navLinks = <nav  className="flex  font-medium space-x-10 ">
  <li className="hover:text-yellow-500"><NavLink to="/">HOME</NavLink></li>
- <li className="hover:text-yellow-500"><NavLink to="/events">EVENTS</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/blogs">Blogs</NavLink></li>
  <li className="hover:text-yellow-500"><NavLink to="/sponsors">SPONSORS</NavLink></li>
- <li className="hover:text-yellow-500"><NavLink to="/about us">ABOUT US</NavLink></li>
  <li className="hover:text-yellow-500"><NavLink to="/speakers">SPEAKERS</NavLink></li>
+ <li className="hover:text-yellow-500"><NavLink to="/events">EVENTS</NavLink></li>
       
 
       
 </nav>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar  bg-slate-100 max-w-7xl ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const navLinks = <nav  className="flex  font-medium space-x-10">
     </ul>
   </div>
   <div className="md:navbar-end sm:navbar-center">
-    <div>
+    <div className="">
       {
         user && <p>{user?.email}</p>
       }
@@ -64,7 +64,7 @@ const navLinks = <nav  className="flex  font-medium space-x-10">
             user ?
             
              <Link to="/register">
-             <button onClick={handleSingOut} className="btn btn-sm rounded-2xl ">Sing Out</button>
+             <button onClick={handleSingOut} className="btn btn-sm rounded-2xl bg-slate-200 text-yellow-500">Sing Out</button>
              </Link>
              
             :

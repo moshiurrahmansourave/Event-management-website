@@ -6,6 +6,12 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import EventDetail from "../pages/EventPage/EventDetail";
 import PrivetRouts from "./PrivetRouts";
+import Sponsor from "../pages/Sponsor/Sponsor";
+
+import Speakers from "../pages/Speakers/Speakers";
+import Events from "../pages/Events/Events";
+import Blogs from "../pages/Blogs/Blogs";
+
 
 
 const routes = createBrowserRouter([
@@ -33,6 +39,23 @@ const routes = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/sponsors',
+                element:<Sponsor></Sponsor>
+            },
+           
+            {
+                path:'/speakers',
+                element:<Speakers></Speakers>
+            },
+            {
+                path:'/events',
+                element:<Events></Events>
+            },
+            {
+                path:'/blogs',
+                element:<Blogs></Blogs>
             }
         ]
     }

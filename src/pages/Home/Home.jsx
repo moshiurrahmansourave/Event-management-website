@@ -1,25 +1,34 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../shared/Header/Header";
-import LeftSideNav from "../shared/LeftSideNav/LeftSideNav";
+
 import Navbar from "../shared/Navbar/Navbar";
 import EventCard from "./EventCard";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 
 const Home = () => {
+    const { Loading} = useContext(AuthContext)
     const events = useLoaderData();
-    
+    if(Loading){
+        return  <div className="flex justify-center my-20 items-center text-center gap-2">
+            <p className="text-lg">LOADING</p>
+            <span  className="loading loading-spinner loading-sm"></span>
+            
+        </div>
+    }
     return (
         <div>
             
-            <Header></Header>
+            
             <Navbar></Navbar>
             
-            <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-1">
-                <div className="col-span-1 ">
-                    <LeftSideNav></LeftSideNav>
-                </div>
-                <div className="col-span-3 ">
-                  <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-3 ">
+            <Header></Header>
+            
+            <div className="grid grid-cols-1 lg:gap-1">
+                
+                <div className=" ">
+                  <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 p-3 ">
                   {
                     events.map(event => <EventCard
                     key={event.id}
