@@ -6,6 +6,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 import Swal from "sweetalert2";
+import Navbar from "../shared/Navbar/Navbar";
 
 
 const Login = () => {
@@ -76,8 +77,9 @@ const Login = () => {
     }
 
     return (
-        <div className="lg:mb-96 mb-5 mt-10">
-        {/* <Navbar></Navbar> */}
+        <div className="lg:mb-96 mb-5 ">
+
+        <Navbar></Navbar>
         <div className="card w-96 glass mx-auto my-6 ">
             <div className="p-3">
                 <div className="flex items-center justify-between">

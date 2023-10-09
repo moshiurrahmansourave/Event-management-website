@@ -3,6 +3,7 @@ import { Link,  useNavigate,  } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
+import Navbar from "../shared/Navbar/Navbar";
 
 
 
@@ -53,10 +54,10 @@ const Register = () => {
     }
 
     return (
-        <div className="lg:mb-96 mb-5 mt-10">
+        <div className="lg:mb-96 mb-5 ">
            
-            {/* <Navbar></Navbar> */}
-            <div className=" card p-4 w-96 glass mx-auto relative ">
+            <Navbar></Navbar>
+            <div className=" card p-4 w-96 glass mx-auto relative mt-8">
             <div className="">
             <div className="flex items-center justify-between">
                 <h2 className="card-title">Register</h2>
