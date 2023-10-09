@@ -15,14 +15,14 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer:-  A: `{}`</b></summary>
-<p>
+<details><summary><b>Answer:</b></summary>
+<p> A: `{}
 
 #### Answer: ?
 
-<i>this  console are trying to get greetign  value  and the greetgn = {} . that's  why the  ans is (A)</i>
+<i>Write your explanation here</i>
 
-</p>
+</p>this  console are trying to get greetign  value  and the greetgn = {} . that's  why the  ans is (A)
 </details>
 
 ###### 2. Write the `correct answer` from the following options and give an explanation (2-5 lines).
@@ -67,13 +67,13 @@ console.log(food);
 - D: `ReferenceError`
 
 <details><summary><b>Answer</b></summary>
-<p>
+<p> A: `['🍕', '🍫', '🥑', '🍔']`
 
 #### Answer: ?
 
 <i>Write your explanation here</i>
 
-</p>
+</p> on the function try to  get value of (food) by console log and  the answer is (A) because the value of favoriteFood  is not set in the  food
 </details>
 
 ###### 4. Write the `correct answer` from the following options and give an explanation (2-5 lines).
@@ -92,13 +92,13 @@ console.log(sayHi());
 - D: `ReferenceError`
 
 <details><summary><b>Answer</b></summary>
-<p>
+<p>B: `Hi there, undefined`
 
 #### Answer: ?
 
 <i>Write your explanation here</i>
 
-</p>
+</p>on the function do not set the value of name for the reason the result of name is undefined and the  return of  string "Hi there" is Hi there
 </details>
 
 ###### 5. Write the `correct answer` from the following options and give an explanation (2-5 lines).
@@ -120,11 +120,11 @@ console.log(count);
 - D: 4
 
 <details><summary><b>Answer</b></summary>
-<p>
+<p>C: 3
 
 #### Answer: ?
 
 <i>Write your explanation here</i>
 
-</p>
+</p> because the condition is Count+= 1 that's means 0 number in the array of nums is not count and the function is looping  and the  last count is 3 that's why the result is  3
 </details>
